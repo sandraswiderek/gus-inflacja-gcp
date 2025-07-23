@@ -61,7 +61,7 @@ def fetch_gus_data(request):
         content_type="application/json"
     )
 
-    return "Dane zapisane do Cloud Storage."
+    return "Dane zapisane do Cloud Storage."```
 
 ---
 
@@ -75,13 +75,13 @@ def fetch_gus_data(request):
 ### 4. Wdrożenie funkcji jako Cloud Function
 # Funkcja fetch_gus_data została wdrożona do Google Cloud za pomocą:
 
-gcloud functions deploy fetch_gus_data \
+```gcloud functions deploy fetch_gus_data \
   --runtime python39 \
   --trigger-http \
   --entry-point fetch_gus_data \
   --region europe-central2 \
   --allow-unauthenticated \
-  --no-gen2
+  --no-gen2```
 
 ---
 
@@ -92,7 +92,7 @@ gus_inflation_2025-07-23.json
 
 ---
 
-###6. Załadowanie danych do BigQuery
+### 6. Załadowanie danych do BigQuery
 # Przejście do BigQuery → Utwórz tabelę → Źródło: Cloud Storage
 
 ---
@@ -100,7 +100,7 @@ gus_inflation_2025-07-23.json
 ### 7. Rozwinięcie danych w SQL
 # Aby dostać się do danych takich jak year, month, value, należy rozpakować zagnieżdżone pola JSON przy użyciu UNNEST():
 
-SELECT
+```SELECT
   v.year,
   v.month,
   v.val AS value,
@@ -109,4 +109,4 @@ FROM
   `zmiana-cen-i-inflacja-w-polsce.inflacja_dataset.gus_json_raw`,
   UNNEST(results) AS r,
   UNNEST(r.values) AS v
-LIMIT 10;
+LIMIT 10;```

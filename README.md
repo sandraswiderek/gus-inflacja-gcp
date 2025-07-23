@@ -67,7 +67,8 @@ def fetch_gus_data(request):
 ---
 
 ### 3. Utworzenie pliku requirements.txt
-# Zawiera zależności potrzebne do działania funkcji:
+
+Zawiera zależności potrzebne do działania funkcji:
 
 ```txt requests google-cloud-storage 
 ```
@@ -75,7 +76,8 @@ def fetch_gus_data(request):
 ---
 
 ### 4. Wdrożenie funkcji jako Cloud Function
-# Funkcja fetch_gus_data została wdrożona do Google Cloud za pomocą:
+
+Funkcja fetch_gus_data została wdrożona do Google Cloud za pomocą:
 
 ```gcloud functions deploy fetch_gus_data \
   --runtime python39 \
@@ -89,19 +91,22 @@ def fetch_gus_data(request):
 ---
 
 ### 5. Wynik działania funkcji
-# Po wywołaniu funkcji dane są zapisywane jako pliki JSON w buckecie inflacja-gus-raw-data. Przykład pliku:
+
+Po wywołaniu funkcji dane są zapisywane jako pliki JSON w buckecie inflacja-gus-raw-data. Przykład pliku:
 
 ```gus_inflation_2025-07-23.json```
 
 ---
 
 ### 6. Załadowanie danych do BigQuery
-# Przejście do BigQuery → Utwórz tabelę → Źródło: Cloud Storage
+
+Przejście do BigQuery → Utwórz tabelę → Źródło: Cloud Storage
 
 ---
 
 ### 7. Rozwinięcie danych w SQL
-# Aby dostać się do danych takich jak year, month, value, należy rozpakować zagnieżdżone pola JSON przy użyciu UNNEST():
+
+Aby dostać się do danych takich jak year, month, value, należy rozpakować zagnieżdżone pola JSON przy użyciu UNNEST():
 
 ```SELECT
   v.year,

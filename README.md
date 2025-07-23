@@ -61,14 +61,16 @@ def fetch_gus_data(request):
         content_type="application/json"
     )
 
-    return "Dane zapisane do Cloud Storage."```
+    return "Dane zapisane do Cloud Storage."
+```
 
 ---
 
 ### 3. Utworzenie pliku requirements.txt
 # Zawiera zależności potrzebne do działania funkcji:
 
-<pre lang="md"> ```txt requests google-cloud-storage ``` </pre>
+```txt requests google-cloud-storage 
+```
 
 ---
 
@@ -81,14 +83,15 @@ def fetch_gus_data(request):
   --entry-point fetch_gus_data \
   --region europe-central2 \
   --allow-unauthenticated \
-  --no-gen2```
+  --no-gen2
+```
 
 ---
 
 ### 5. Wynik działania funkcji
 # Po wywołaniu funkcji dane są zapisywane jako pliki JSON w buckecie inflacja-gus-raw-data. Przykład pliku:
 
-gus_inflation_2025-07-23.json
+```gus_inflation_2025-07-23.json```
 
 ---
 
@@ -109,4 +112,5 @@ FROM
   `zmiana-cen-i-inflacja-w-polsce.inflacja_dataset.gus_json_raw`,
   UNNEST(results) AS r,
   UNNEST(r.values) AS v
-LIMIT 10;```
+LIMIT 10;
+```

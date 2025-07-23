@@ -1,22 +1,22 @@
 # gus-inflacja-gcp
-PL: Projekt: Dashboard inflacji na podstawie danych GUS BDL i Google Cloud Platform
-ENG: Inflation trends dashboard using Polish GUS BDL API and Google Cloud Platform (BigQuery, Cloud Functions, Looker Studio)
+#PL: Projekt: Dashboard inflacji na podstawie danych GUS BDL i Google Cloud Platform
+#ENG: Inflation trends dashboard using Polish GUS BDL API and Google Cloud Platform (BigQuery, Cloud Functions, Looker Studio)
 
-Cel:
-Stworzenie automatycznego pipeline’u danych z Głównego Urzędu Statystycznego (GUS) w celu wizualizacji inflacji i zmian cen w Polsce. Dane są pobierane z API BDL, przetwarzane w GCP i prezentowane w interaktywnym dashboardzie.
+##Cel:
+#Stworzenie automatycznego pipeline’u danych z Głównego Urzędu Statystycznego (GUS) w celu wizualizacji inflacji i zmian cen w Polsce. Dane są pobierane z API BDL, #przetwarzane w GCP i prezentowane w interaktywnym dashboardzie.
 
-Użyte technologie:
-- Google Cloud Functions (pobieranie danych z API)
-- Google Cloud Storage (przechowywanie JSON)
-- BigQuery (hurtownia danych i analiza)
-- Looker Studio (dashboard interaktywny)
-- Python (żądanie HTTP, przetwarzanie danych)
-- GitHub (dokumentacja i wersjonowanie)
+##Użyte technologie:
+#- Google Cloud Functions (pobieranie danych z API)
+#- Google Cloud Storage (przechowywanie JSON)
+#- BigQuery (hurtownia danych i analiza)
+#- Looker Studio (dashboard interaktywny)
+#- Python (żądanie HTTP, przetwarzanie danych)
+#- GitHub (dokumentacja i wersjonowanie)
 
-Proces:
-1. Utworzenie bucketa 'inflacja-gus-raw-data' (lokalizacja: europe-central2, klasa pamięci: autoclass)
-2. Dwa pliki:
-1) main.py:
+##Proces:
+#1. Utworzenie bucketa 'inflacja-gus-raw-data' (lokalizacja: europe-central2, klasa pamięci: autoclass)
+#2. Dwa pliki:
+#1) main.py:
 
 import requests
 import json
@@ -42,14 +42,14 @@ def fetch_gus_data(request):
 
     return "Dane zapisane do Cloud Storage."
 
-2) requirements.txt:
+#2) requirements.txt:
 
 requests
 google-cloud-storage
 
 ----------------------------------------------------
 
-Wdrożenie funkcji w cloudshell:
+#Wdrożenie funkcji w cloudshell:
 gcloud functions deploy fetch_gus_data \
   --runtime python310 \
   --trigger-http \

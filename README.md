@@ -62,20 +62,19 @@ def fetch_gus_data(request):
     )
 
     return "Dane zapisane do Cloud Storage."
-3. Utworzenie pliku requirements.txt
-Zawiera zależności potrzebne do działania funkcji:
 
-nginx
-Kopiuj
-Edytuj
-requests
-google-cloud-storage
-4. Wdrożenie funkcji jako Cloud Function
-Funkcja fetch_gus_data została wdrożona do Google Cloud za pomocą:
+---
 
-bash
-Kopiuj
-Edytuj
+### 3. Utworzenie pliku requirements.txt
+# Zawiera zależności potrzebne do działania funkcji:
+
+<pre lang="md"> ```txt requests google-cloud-storage ``` </pre>
+
+---
+
+### 4. Wdrożenie funkcji jako Cloud Function
+# Funkcja fetch_gus_data została wdrożona do Google Cloud za pomocą:
+
 gcloud functions deploy fetch_gus_data \
   --runtime python39 \
   --trigger-http \
@@ -83,32 +82,24 @@ gcloud functions deploy fetch_gus_data \
   --region europe-central2 \
   --allow-unauthenticated \
   --no-gen2
-5. Wynik działania funkcji
-Po wywołaniu funkcji dane są zapisywane jako pliki JSON w buckecie inflacja-gus-raw-data. Przykład pliku:
 
-pgsql
-Kopiuj
-Edytuj
+---
+
+### 5. Wynik działania funkcji
+# Po wywołaniu funkcji dane są zapisywane jako pliki JSON w buckecie inflacja-gus-raw-data. Przykład pliku:
+
 gus_inflation_2025-07-23.json
-6. Załadowanie danych do BigQuery
-Przejście do BigQuery → Utwórz tabelę → Źródło: Cloud Storage
 
-Wskazanie pliku .json z bucketa
+---
 
-Format pliku: JSON
+###6. Załadowanie danych do BigQuery
+# Przejście do BigQuery → Utwórz tabelę → Źródło: Cloud Storage
 
-Nazwa zbioru danych: inflacja_dataset, nazwa tabeli: gus_json_raw
+---
 
-Włączone automatyczne wykrywanie schematu (Wykryj automatycznie)
+### 7. Rozwinięcie danych w SQL
+# Aby dostać się do danych takich jak year, month, value, należy rozpakować zagnieżdżone pola JSON przy użyciu UNNEST():
 
-Tabela załadowana pomyślnie zagnieżdżonymi polami (RECORD, REPEATED)
-
-7. Rozwinięcie danych w SQL
-Aby dostać się do danych takich jak year, month, value, należy rozpakować zagnieżdżone pola JSON przy użyciu UNNEST():
-
-sql
-Kopiuj
-Edytuj
 SELECT
   v.year,
   v.month,

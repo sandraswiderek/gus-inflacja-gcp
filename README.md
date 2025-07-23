@@ -1,9 +1,9 @@
 # 📊 gus-inflacja-gcp
 
-## 🇵🇱 Projekt
+## Projekt
 
 Dashboard inflacji na podstawie danych GUS BDL i Google Cloud Platform  
-🇬🇧 *Inflation trends dashboard using Polish GUS BDL API and Google Cloud Platform (BigQuery, Cloud Functions, Looker Studio)*
+**ENG**: *Inflation trends dashboard using Polish GUS BDL API and Google Cloud Platform (BigQuery, Cloud Functions, Looker Studio)*
 
 ---
 
@@ -27,6 +27,7 @@ Stworzenie automatycznego pipeline’u danych z Głównego Urzędu Statystyczneg
 ## 🧱 Proces
 
 ### 1. Utworzenie bucketa Cloud Storage
+
 - Nazwa: `inflacja-gus-raw-data`
 - Lokalizacja: `europe-central2 (Warszawa)`
 - Klasa pamięci: `Autoclass`
@@ -34,6 +35,8 @@ Stworzenie automatycznego pipeline’u danych z Głównego Urzędu Statystyczneg
 ---
 
 ### 2. Stworzenie pliku `main.py`
+
+Plik zawiera funkcję do pobierania danych z API GUS i zapisania ich do bucketa.
 
 ```python
 import requests
@@ -50,7 +53,7 @@ def fetch_gus_data(request):
     filename = f"gus_inflation_{today}.json"
 
     client = storage.Client()
-    bucket = client.get_bucket("inflacja-gus-raw-data")  # <- tu nic nie zmieniaj
+    bucket = client.get_bucket("inflacja-gus-raw-data")
     blob = bucket.blob(filename)
 
     blob.upload_from_string(
@@ -59,3 +62,60 @@ def fetch_gus_data(request):
     )
 
     return "Dane zapisane do Cloud Storage."
+3. Utworzenie pliku requirements.txt
+Zawiera zależności potrzebne do działania funkcji:
+
+nginx
+Kopiuj
+Edytuj
+requests
+google-cloud-storage
+4. Wdrożenie funkcji jako Cloud Function
+Funkcja fetch_gus_data została wdrożona do Google Cloud za pomocą:
+
+bash
+Kopiuj
+Edytuj
+gcloud functions deploy fetch_gus_data \
+  --runtime python39 \
+  --trigger-http \
+  --entry-point fetch_gus_data \
+  --region europe-central2 \
+  --allow-unauthenticated \
+  --no-gen2
+5. Wynik działania funkcji
+Po wywołaniu funkcji dane są zapisywane jako pliki JSON w buckecie inflacja-gus-raw-data. Przykład pliku:
+
+pgsql
+Kopiuj
+Edytuj
+gus_inflation_2025-07-23.json
+6. Załadowanie danych do BigQuery
+Przejście do BigQuery → Utwórz tabelę → Źródło: Cloud Storage
+
+Wskazanie pliku .json z bucketa
+
+Format pliku: JSON
+
+Nazwa zbioru danych: inflacja_dataset, nazwa tabeli: gus_json_raw
+
+Włączone automatyczne wykrywanie schematu (Wykryj automatycznie)
+
+Tabela załadowana pomyślnie zagnieżdżonymi polami (RECORD, REPEATED)
+
+7. Rozwinięcie danych w SQL
+Aby dostać się do danych takich jak year, month, value, należy rozpakować zagnieżdżone pola JSON przy użyciu UNNEST():
+
+sql
+Kopiuj
+Edytuj
+SELECT
+  v.year,
+  v.month,
+  v.val AS value,
+  v.unitName
+FROM
+  `zmiana-cen-i-inflacja-w-polsce.inflacja_dataset.gus_json_raw`,
+  UNNEST(results) AS r,
+  UNNEST(r.values) AS v
+LIMIT 10;

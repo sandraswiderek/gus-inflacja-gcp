@@ -70,8 +70,7 @@ def fetch_gus_data(request):
 
 Zawiera zależności potrzebne do działania funkcji:
 
-```txt requests google-cloud-storage 
-```
+```txt requests google-cloud-storage ```
 
 ---
 

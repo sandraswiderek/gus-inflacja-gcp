@@ -17,6 +17,7 @@ Proces:
 1. Utworzenie bucketa 'inflacja-gus-raw-data' (lokalizacja: europe-central2, klasa pamięci: autoclass)
 2. Dwa pliki:
 1) main.py:
+
 import requests
 import json
 import datetime
@@ -42,8 +43,10 @@ def fetch_gus_data(request):
     return "Dane zapisane do Cloud Storage."
 
 2) requirements.txt:
+
 requests
 google-cloud-storage
+
 ----------------------------------------------------
 
 Wdrożenie funkcji w cloudshell:

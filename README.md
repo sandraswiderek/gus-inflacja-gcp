@@ -76,7 +76,8 @@ gcloud functions deploy gus_function \
   --allow-unauthenticated
 ```
 
-2 and 3 repeat for gdp_function and kursy_function.
+(Repeat steps 2 and 3 for `gdp_function` and `kursy_function`)
+
 
 
 4. Run SQL transformations in BigQuery

@@ -16,10 +16,10 @@ Design and implement a cloud-based data pipeline for collecting, processing, and
 ---
 
 ## 📐 Project Architecture
-- Data ingested from public APIs: GUS, Eurostat, and NBP (exchange rates).  
-- Raw data stored in **Google Cloud Storage**.  
-- Data processed and loaded into **BigQuery**.  
-- Automated data refresh using **Cloud Scheduler**.  
+- Data ingested from public APIs: GUS, Eurostat, and NBP (exchange rates),
+- Raw data stored in **Google Cloud Storage**,
+- Data processed and loaded into **BigQuery**,
+- Automated data refresh using **Cloud Scheduler**,
 - Visualization created in **Looker Studio** (interactive dashboard with year selector). 
 
 ---
@@ -38,9 +38,9 @@ Design and implement a cloud-based data pipeline for collecting, processing, and
 ---
 
 ## Features
-- 🔄 Automated data ingestion from GUS, Eurostat, and NBP APIs.  
-- ⏱️ Scheduled updates of BigQuery datasets.  
-- 🖥️ Interactive dashboard with year selection and comparison charts.  
+- 🔄 Automated data ingestion from GUS, Eurostat, and NBP APIs,
+- ⏱️ Scheduled updates of BigQuery datasets,
+- 🖥️ Interactive dashboard with year selection and comparison charts, 
 - 📈 Historical data analysis of inflation, wages, product prices (bread, fuel, energy), unemployment, and exchange rates.
 
 ---
@@ -103,6 +103,6 @@ Example screenshot:
 
 ## Future Improvements
 
-Adding more economic indicators (housing prices, interest rates)
-Expanding dashboard interactivity with custom filters.
+* adding more economic indicators (housing prices, interest rates)
+* expanding dashboard interactivity with custom filters
 ```

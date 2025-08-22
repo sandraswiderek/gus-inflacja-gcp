@@ -9,6 +9,7 @@ Interactive data pipeline and dashboard showing macroeconomic indicators in Pola
 ## 🎯 Project Goal
 
 Design and implement a cloud-based data pipeline for collecting, processing, and visualizing macroeconomic indicators of Poland. The dashboard provides insights into price dynamics, inflation, wages, and exchange rates.
+
 ---
 
 ## 🧰 Project Architecture

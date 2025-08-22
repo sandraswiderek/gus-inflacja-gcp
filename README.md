@@ -105,4 +105,4 @@ Example screenshot:
 
 * adding more economic indicators (housing prices, interest rates)
 * expanding dashboard interactivity with custom filters
-```
+

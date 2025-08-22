@@ -93,7 +93,7 @@ gcloud functions deploy gus_function \
 
 ## Dashboard Demo
 
-Live Looker Studio Dashboard: https://lookerstudio.google.com/reporting/ad47fc1c-771f-4632-bb84-a67096e62b93
+Live Looker Studio Dashboard: [![View Dashboard](https://img.shields.io/badge/Live%20Dashboard-Looker%20Studio-blue)](https://lookerstudio.google.com/reporting/ad47fc1c-771f-4632-bb84-a67096e62b93)
 
 Example screenshot:
 
@@ -104,5 +104,5 @@ Example screenshot:
 ## Future Improvements
 
 Adding more economic indicators (housing prices, interest rates)
-
+Expanding dashboard interactivity with custom filters.
 ```

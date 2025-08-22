@@ -2,118 +2,88 @@
 
 ## Project
 
-*Interactive data pipeline and dashboard showing macroeconomic indicators in Poland (inflation, wages, fuel, energy, bread, unemployment, exchange rates).*
+Interactive data pipeline and dashboard showing macroeconomic indicators in Poland (inflation, wages, fuel, energy, bread, unemployment, exchange rates).
 
 ---
 
-## 🎯 Cel projektu
+## 🎯 Project Goal
 
-Stworzenie automatycznego pipeline’u danych z Głównego Urzędu Statystycznego (GUS), przetwarzanych w Google Cloud Platform i prezentowanych w Looker Studio jako interaktywny dashboard do analizy inflacji i zmian cen w Polsce.
-
----
-
-## 🧰 Użyte technologie
-
-- **Google Cloud Functions** – pobieranie danych z API
-- **Google Cloud Storage** – przechowywanie JSON
-- **BigQuery** – hurtownia danych i analiza SQL
-- **Looker Studio** – interaktywny dashboard
-- **Python** – żądania HTTP i przetwarzanie danych
-- **GitHub** – dokumentacja i wersjonowanie
+The goal of this project was to design a cloud-based data pipeline for collecting, processing, and visualizing macroeconomic indicators of Poland. It aims to provide clear insights into price dynamics, inflation, and their relation to wages and exchange rates through an interactive dashboard.
 
 ---
 
-## 🧱 Proces
-
-### 1. Utworzenie bucketa Cloud Storage
-
-- Nazwa: `inflacja-gus-raw-data`
-- Lokalizacja: `europe-central2 (Warszawa)`
-- Klasa pamięci: `Autoclass`
-
----
-
-### 2. Stworzenie pliku `main.py`
-
-Plik zawiera funkcję do pobierania danych z API GUS i zapisania ich do bucketa.
-
-```python
-import requests
-import json
-import datetime
-from google.cloud import storage
-
-def fetch_gus_data(request):
-    url = "https://bdl.stat.gov.pl/api/v1/data/by-variable/60495?format=json"
-    response = requests.get(url)
-    data = response.json()
-
-    today = datetime.date.today().isoformat()
-    filename = f"gus_inflation_{today}.json"
-
-    client = storage.Client()
-    bucket = client.get_bucket("inflacja-gus-raw-data")
-    blob = bucket.blob(filename)
-
-    blob.upload_from_string(
-        data=json.dumps(data),
-        content_type="application/json"
-    )
-
-    return "Dane zapisane do Cloud Storage."
-```
+## 🧰 Project Architecture
+- Data ingested from public APIs: GUS, Eurostat, and NBP (exchange rates).  
+- Raw data stored in **Google Cloud Storage**.  
+- Data processed and loaded into **BigQuery**.  
+- Automated updates scheduled via **Cloud Scheduler**.  
+- Visualization created in **Looker Studio** (interactive dashboard with year selector). 
 
 ---
 
-### 3. Utworzenie pliku requirements.txt
+📊 **Pipeline flow:**  
+APIs → Cloud Storage → BigQuery → Looker Studio  
 
-Zawiera zależności potrzebne do działania funkcji:
+## Technologies
+- **Google Cloud Platform**: BigQuery, Cloud Storage, Cloud Scheduler  
+- **Python** (requests, pandas, google-cloud-bigquery)  
+- **SQL**  
+- **Looker Studio**  
 
-```txt requests google-cloud-storage ```
+## Features
+- Automated data ingestion from GUS, Eurostat, and NBP APIs.  
+- Scheduled updates of BigQuery datasets.  
+- Interactive dashboard with year selection and comparison charts.  
+- Historical data analysis of inflation, wages, product prices (bread, fuel, energy), unemployment, and exchange rates.
 
----
 
-### 4. Wdrożenie funkcji jako Cloud Function
+## 🧱
 
-Funkcja fetch_gus_data została wdrożona do Google Cloud za pomocą:
+## Getting Started 
 
-```gcloud functions deploy fetch_gus_data \
-  --runtime python39 \
+1. Clone the repository
+
+   git clone https://github.com/sandraswiderek/macro-dashboard-pl
+   cd macro-dashboard-pl
+
+
+2. Install dependencies for each function
+Example for GUS function:
+
+cd gus_function
+pip install -r requirements.txt
+
+
+3. Deploy Cloud Functions
+
+gcloud functions deploy gus_function \
+  --runtime python310 \
   --trigger-http \
-  --entry-point fetch_gus_data \
-  --region europe-central2 \
-  --allow-unauthenticated \
-  --no-gen2
-```
+  --allow-unauthenticated
+
+(repeat for gdp_function and kursy_function)
+
+
+4. Run SQL transformations in BigQuery
+
+latest_query.sql → loads the most recent macroeconomic data
+refresh_gdp_fx_quarterly.sql → updates GDP and exchange rate data quarterly
+
+
+5. Connect BigQuery to Looker Studio
+Build interactive dashboard with year selector and comparison charts.
 
 ---
 
-### 5. Wynik działania funkcji
+## Dashboard Demo
 
-Po wywołaniu funkcji dane są zapisywane jako pliki JSON w buckecie inflacja-gus-raw-data. Przykład pliku:
+Live Looker Studio Dashboard
+ (insert your public link)
 
-```gus_inflation_2025-07-23.json```
+Example screenshot:
 
----
+## Future Improvements
 
-### 6. Załadowanie danych do BigQuery
+Adding more economic indicators (housing prices, interest rates)
 
-Przejście do BigQuery → Utwórz tabelę → Źródło: Cloud Storage
-
----
-
-### 7. Rozwinięcie danych w SQL
-
-Aby dostać się do danych takich jak year, month, value, należy rozpakować zagnieżdżone pola JSON przy użyciu UNNEST():
-
-```SELECT
-  v.year,
-  v.month,
-  v.val AS value,
-  v.unitName
-FROM
-  `zmiana-cen-i-inflacja-w-polsce.inflacja_dataset.gus_json_raw`,
-  UNNEST(results) AS r,
-  UNNEST(r.values) AS v
-LIMIT 10;
 ```

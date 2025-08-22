@@ -1,0 +1,18 @@
+2025-08-05 21:05:10.955 [info] 
+
+
+
+
+2025-08-05 21:05:10.968 [info] Extension host agent started.
+2025-08-05 21:05:10.980 [info] Started initializing default profile extensions in extensions installation folder. file:///home/sandraswiderekk/.codeoss/extensions
+2025-08-05 21:05:10.992 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/sandraswiderekk/.codeoss/extensions
+2025-08-05 21:05:14.134 [info] [127.0.0.1][80b8ed0d][ManagementConnection] New connection established.
+2025-08-05 21:05:14.136 [info] [127.0.0.1][0b4677c7][ExtensionHostConnection] New connection established.
+2025-08-05 21:05:15.758 [info] [127.0.0.1][0b4677c7][ExtensionHostConnection] <1256> Launched Extension Host Process.
+2025-08-05 21:12:51.912 [info] [127.0.0.1][80b8ed0d][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2025-08-05 21:12:52.104 [info] [127.0.0.1][0b4677c7][ExtensionHostConnection] <1256> Extension Host Process exited with code: 0, signal: null.
+2025-08-05 21:21:21.169 [info] [127.0.0.1][6531ec15][ManagementConnection] New connection established.
+2025-08-05 21:21:21.170 [info] [127.0.0.1][b063f7a0][ExtensionHostConnection] New connection established.
+2025-08-05 21:21:21.175 [info] [127.0.0.1][b063f7a0][ExtensionHostConnection] <2336> Launched Extension Host Process.
+2025-08-05 23:50:41.634 [info] [127.0.0.1][6531ec15][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2025-08-05 23:50:41.870 [info] [127.0.0.1][b063f7a0][ExtensionHostConnection] <2336> Extension Host Process exited with code: 0, signal: null.

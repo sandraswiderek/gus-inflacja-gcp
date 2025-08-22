@@ -1,0 +1,33 @@
+2025-08-05 21:05:16.889 [info] Extension host with pid 1256 started
+2025-08-05 21:05:16.906 [info] Lock '/home/sandraswiderekk/.codeoss/data/User/workspaceStorage/296c6c05/vscode.lock': Lock acquired.
+2025-08-05 21:05:16.981 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-08-05 21:05:16.982 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-08-05 21:05:16.983 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-08-05 21:05:16.983 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-08-05 21:05:17.492 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-08-05 21:05:17.503 [info] ExtensionService#_doActivateExtension ms-python.python, startup: true, activationEvent: 'workspaceContains:requirements.txt'
+2025-08-05 21:05:17.793 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-08-05 21:05:17.794 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-08-05 21:05:17.916 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python-env-tools/bin/pet ENOENT
+	at ChildProcess._handle.onexit (node:internal/child_process:285:19)
+	at onErrorNT (node:internal/child_process:483:16)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-08-05 21:05:18.376 [info] Eager extensions activated
+2025-08-05 21:05:18.377 [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig, startup: false, activationEvent: 'onStartupFinished'
+2025-08-05 21:05:18.377 [info] ExtensionService#_doActivateExtension google.cloud-shell, startup: false, activationEvent: 'onStartupFinished'
+2025-08-05 21:05:18.378 [info] ExtensionService#_doActivateExtension google.geminicodeassist, startup: false, activationEvent: 'onStartupFinished', root cause: googlecloudtools.cloudcode
+2025-08-05 21:05:18.378 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-08-05 21:05:18.379 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-08-05 21:06:07.202 [error] unauthorized. cloudshell.authorize {"value":"google.cloud-shell","_lower":"google.cloud-shell"}
+2025-08-05 21:06:07.240 [info] ExtensionService#_doActivateExtension googlecloudtools.cloudcode, startup: false, activationEvent: 'onStartupFinished'
+2025-08-05 21:06:14.443 [error] unauthorized. cloudshell.authorize {"value":"google.cloud-shell","_lower":"google.cloud-shell"}
+2025-08-05 21:06:14.525 [error] Activating extension googlecloudtools.cloudcode failed due to an error:
+2025-08-05 21:06:14.525 [error] Error: Error calling Cloud Shell Theia Authorization. undefined
+    at t.CloudShellTheiaAuth.<anonymous> (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:9419419)
+    at Generator.throw (<anonymous>)
+    at s (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:9418050)
+2025-08-05 21:09:57.815 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-08-05 21:09:57.815 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+2025-08-05 21:12:52.011 [info] Extension host terminating: received terminate message from renderer
+2025-08-05 21:12:52.011 [info] Lock '/home/sandraswiderekk/.codeoss/data/User/workspaceStorage/296c6c05/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2025-08-05 21:12:52.039 [info] Extension host with pid 1256 exiting with code 0

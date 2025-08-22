@@ -1,0 +1,28 @@
+2025-08-22 12:29:19.104 [info] Extension host with pid 1283 started
+2025-08-22 12:29:19.105 [error] Error: EEXIST: file already exists, open '/home/sandraswiderekk/.codeoss/data/User/workspaceStorage/296c6c05/vscode.lock'
+2025-08-22 12:29:19.115 [info] Lock '/home/sandraswiderekk/.codeoss/data/User/workspaceStorage/296c6c05/vscode.lock': Could not acquire lock, checking if the file is stale.
+2025-08-22 12:29:19.116 [info] Lock '/home/sandraswiderekk/.codeoss/data/User/workspaceStorage/296c6c05/vscode.lock': The pid 1268 appears to be gone.
+2025-08-22 12:29:19.116 [info] Lock '/home/sandraswiderekk/.codeoss/data/User/workspaceStorage/296c6c05/vscode.lock': Deleting a stale lock.
+2025-08-22 12:29:19.125 [info] Lock '/home/sandraswiderekk/.codeoss/data/User/workspaceStorage/296c6c05/vscode.lock': Lock acquired.
+2025-08-22 12:29:19.450 [info] ExtensionService#_doActivateExtension google.geminicodeassist, startup: false, activationEvent: 'onView:cloudcode.gemini.chatView'
+2025-08-22 12:29:19.452 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-08-22 12:29:19.452 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'onLanguage:python'
+2025-08-22 12:29:19.453 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-08-22 12:29:19.453 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-08-22 12:29:19.454 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-08-22 12:29:21.667 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-08-22 12:29:21.974 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-08-22 12:29:21.974 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-08-22 12:29:22.097 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python-env-tools/bin/pet ENOENT
+	at ChildProcess._handle.onexit (node:internal/child_process:285:19)
+	at onErrorNT (node:internal/child_process:483:16)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-08-22 12:29:22.221 [info] ExtensionService#_doActivateExtension google.cloud-shell, startup: false, activationEvent: 'onCommand:cloudshell.isAuthorized'
+2025-08-22 12:29:22.421 [info] Eager extensions activated
+2025-08-22 12:29:22.421 [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig, startup: false, activationEvent: 'onStartupFinished'
+2025-08-22 12:29:22.422 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-08-22 12:29:22.422 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-08-22 12:29:23.689 [info] ExtensionService#_doActivateExtension googlecloudtools.cloudcode, startup: false, activationEvent: 'onStartupFinished'
+2025-08-22 12:34:31.478 [warning] [Decorations] CAPPING events from decorations provider vscode.git 301
+2025-08-22 12:34:31.615 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-08-22 12:34:31.696 [warning] [Decorations] CAPPING events from decorations provider vscode.git 301

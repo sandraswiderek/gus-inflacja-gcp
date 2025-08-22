@@ -1,0 +1,122 @@
+2025-08-05 21:05:18.084 [warning] Dir "/home/sandraswiderekk/.pixi/envs" is not watchable (directory does not exist)
+2025-08-05 21:05:18.084 [info] Starting Environment refresh
+2025-08-05 21:05:18.084 [info] Searching for interpreters in posix paths locator
+2025-08-05 21:05:18.084 [info] Searching for pyenv environments
+2025-08-05 21:05:18.084 [info] Searching for conda environments
+2025-08-05 21:05:18.084 [info] Searching for global virtual environments
+2025-08-05 21:05:18.084 [info] Searching for custom virtual environments
+2025-08-05 21:05:18.084 [info] pyenv is not installed
+2025-08-05 21:05:18.084 [info] Finished searching for pyenv environments: 14 milliseconds
+2025-08-05 21:05:18.084 [info] Finished searching for custom virtual envs: 13 milliseconds
+2025-08-05 21:05:18.084 [info] > conda info --json
+2025-08-05 21:05:18.084 [info] > hatch env show --json
+2025-08-05 21:05:18.084 [info] cwd: .
+2025-08-05 21:05:18.084 [info] > pyenv which python
+2025-08-05 21:05:18.084 [info] cwd: .
+2025-08-05 21:05:18.084 [info] Finished searching for global virtual envs: 34 milliseconds
+2025-08-05 21:05:18.085 [info] Found: /bin/python --> /bin/python3.12
+2025-08-05 21:05:18.091 [info] Found: /bin/python3 --> /bin/python3.12
+2025-08-05 21:05:18.091 [info] Found: /bin/python3.12 --> /bin/python3.12
+2025-08-05 21:05:18.120 [info] Found: /usr/bin/python --> /usr/bin/python3.12
+2025-08-05 21:05:18.124 [info] Found: /usr/bin/python3 --> /usr/bin/python3.12
+2025-08-05 21:05:18.124 [info] Found: /usr/bin/python3.12 --> /usr/bin/python3.12
+2025-08-05 21:05:18.178 [info] Finished searching for interpreters in posix paths locator: 144 milliseconds
+2025-08-05 21:05:18.178 [info] > /bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2025-08-05 21:05:18.191 [info] > /usr/bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2025-08-05 21:05:18.191 [info] Environments refresh paths discovered (event): 160 milliseconds
+2025-08-05 21:05:18.191 [info] Environments refresh paths discovered: 161 milliseconds
+2025-08-05 21:05:18.229 [info] Environments refresh finished (event): 199 milliseconds
+2025-08-05 21:05:18.239 [info] Environment refresh took 208 milliseconds
+2025-08-05 21:05:18.244 [info] Python interpreter path: /bin/python
+2025-08-05 21:05:20.514 [info] Discover tests for workspace name: undefined - uri: /User/settings.json
+2025-08-05 21:05:21.568 [info] Starting Jedi language server for sandraswiderekk.
+2025-08-05 21:10:12.738 [info] Running installed packages checker:  {
+  id: '/bin/python',
+  sysPrefix: '/usr',
+  envType: 'Global',
+  envName: '',
+  envPath: '',
+  path: '/bin/python',
+  architecture: 3,
+  sysVersion: '3.12.3 (main, Jun 18 2025, 17:59:45) [GCC 13.3.0]',
+  version: {
+    raw: '3.12.3',
+    major: 3,
+    minor: 12,
+    patch: 3,
+    build: [],
+    prerelease: [ 'final', '0' ]
+  },
+  displayName: 'Python 3.12.3 64-bit',
+  detailedDisplayName: 'Python 3.12.3 64-bit',
+  type: undefined
+} /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py /home/sandraswiderekk/bdl-function/requirements.txt
+2025-08-05 21:10:12.739 [info] > /bin/python /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py ./bdl-function/requirements.txt
+2025-08-05 21:11:42.729 [info] Discover tests for workspace name: sandraswiderekk - uri: /home/sandraswiderekk/gdp_function/main.py
+2025-08-05 21:11:52.815 [info] Running installed packages checker:  {
+  id: '/bin/python',
+  sysPrefix: '/usr',
+  envType: 'Global',
+  envName: '',
+  envPath: '',
+  path: '/bin/python',
+  architecture: 3,
+  sysVersion: '3.12.3 (main, Jun 18 2025, 17:59:45) [GCC 13.3.0]',
+  version: {
+    raw: '3.12.3',
+    major: 3,
+    minor: 12,
+    patch: 3,
+    build: [],
+    prerelease: [ 'final', '0' ]
+  },
+  displayName: 'Python 3.12.3 64-bit',
+  detailedDisplayName: 'Python 3.12.3 64-bit',
+  type: undefined
+} /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py /home/sandraswiderekk/gdp_function/requirements.txt
+2025-08-05 21:11:52.816 [info] > /bin/python /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py ./gdp_function/requirements.txt
+2025-08-05 21:12:01.490 [info] Running installed packages checker:  {
+  id: '/bin/python',
+  sysPrefix: '/usr',
+  envType: 'Global',
+  envName: '',
+  envPath: '',
+  path: '/bin/python',
+  architecture: 3,
+  sysVersion: '3.12.3 (main, Jun 18 2025, 17:59:45) [GCC 13.3.0]',
+  version: {
+    raw: '3.12.3',
+    major: 3,
+    minor: 12,
+    patch: 3,
+    build: [],
+    prerelease: [ 'final', '0' ]
+  },
+  displayName: 'Python 3.12.3 64-bit',
+  detailedDisplayName: 'Python 3.12.3 64-bit',
+  type: undefined
+} /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py /home/sandraswiderekk/gdp_function/requirements.txt
+2025-08-05 21:12:01.490 [info] > /bin/python /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py ./gdp_function/requirements.txt
+2025-08-05 21:12:05.917 [info] Discover tests for workspace name: sandraswiderekk - uri: /home/sandraswiderekk/gdp_function/main.py
+2025-08-05 21:12:09.089 [info] Running installed packages checker:  {
+  id: '/bin/python',
+  sysPrefix: '/usr',
+  envType: 'Global',
+  envName: '',
+  envPath: '',
+  path: '/bin/python',
+  architecture: 3,
+  sysVersion: '3.12.3 (main, Jun 18 2025, 17:59:45) [GCC 13.3.0]',
+  version: {
+    raw: '3.12.3',
+    major: 3,
+    minor: 12,
+    patch: 3,
+    build: [],
+    prerelease: [ 'final', '0' ]
+  },
+  displayName: 'Python 3.12.3 64-bit',
+  detailedDisplayName: 'Python 3.12.3 64-bit',
+  type: undefined
+} /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py /home/sandraswiderekk/gdp_function/requirements.txt
+2025-08-05 21:12:09.089 [info] > /bin/python /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py ./gdp_function/requirements.txt

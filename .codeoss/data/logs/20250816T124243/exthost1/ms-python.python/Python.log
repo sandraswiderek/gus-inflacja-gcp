@@ -1,0 +1,12 @@
+2025-08-16 12:43:04.296 [warning] Dir "/home/sandraswiderekk/.pixi/envs" is not watchable (directory does not exist)
+2025-08-16 12:43:04.313 [info] > /bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2025-08-16 12:43:04.368 [info] Python interpreter path: /bin/python
+2025-08-16 12:43:04.636 [info] > pyenv which python
+2025-08-16 12:43:04.636 [info] cwd: .
+2025-08-16 12:43:07.169 [info] Starting Jedi language server for sandraswiderekk.
+2025-08-16 12:54:53.013 [info] Discover tests for workspace name: sandraswiderekk - uri: /home/sandraswiderekk/gdp_function/main.py
+2025-08-16 12:55:08.269 [info] Discover tests for workspace name: sandraswiderekk - uri: /home/sandraswiderekk/gdp_function/main.py
+2025-08-16 12:55:11.854 [info] Discover tests for workspace name: sandraswiderekk - uri: /home/sandraswiderekk/gdp_function/main.py
+2025-08-16 12:55:16.372 [info] Discover tests for workspace name: sandraswiderekk - uri: /home/sandraswiderekk/gdp_function/main.py
+2025-08-16 12:59:32.533 [info] Discover tests for workspace name: sandraswiderekk - uri: /home/sandraswiderekk/gdp_function/main.py
+2025-08-16 12:59:33.053 [info] Discover tests for workspace name: sandraswiderekk - uri: /home/sandraswiderekk/gdp_function/main.py

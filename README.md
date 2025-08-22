@@ -46,23 +46,29 @@ APIs → Cloud Storage → BigQuery → Looker Studio
 
 1. Clone the repository
 
-   git clone https://github.com/sandraswiderek/macro-dashboard-pl
-   cd macro-dashboard-pl
+```bash
+git clone https://github.com/sandraswiderek/macro-dashboard-pl
+cd macro-dashboard-pl
+```
 
 
 2. Install dependencies for each function
 Example for GUS function:
 
+```bash
 cd gus_function
 pip install -r requirements.txt
+```
 
 
 3. Deploy Cloud Functions
 
+```bash
 gcloud functions deploy gus_function \
   --runtime python310 \
   --trigger-http \
   --allow-unauthenticated
+```
 
 (repeat for gdp_function and kursy_function)
 
@@ -83,6 +89,7 @@ Build interactive dashboard with year selector and comparison charts.
 Live Looker Studio Dashboard: https://lookerstudio.google.com/reporting/ad47fc1c-771f-4632-bb84-a67096e62b93
 
 Example screenshot:
+
 <img width="986" height="737" alt="image" src="https://github.com/user-attachments/assets/1a2590f8-410d-48b3-819c-fc4bfdcd7baa" />
 
 ---

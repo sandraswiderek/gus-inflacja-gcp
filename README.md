@@ -1,10 +1,11 @@
 # Price Changes and Inflation in Poland
+*Cloud-based data pipeline and dashboard with economic indicators of Poland.*
 
 ## Project
 
 Interactive data pipeline and dashboard showing macroeconomic indicators in Poland (inflation, wages, fuel, energy, bread, unemployment, exchange rates).
 
-https://img.shields.io/badge/Python-3.10-blue https://img.shields.io/badge/BigQuery-GCP-blueviolet https://img.shields.io/badge/Looker%20Studio-Data%20Viz-orange
+![Python 3.10](https://img.shields.io/badge/Python-3.10-blue) ![BigQuery](https://img.shields.io/badge/BigQuery-GCP-blueviolet) ![Looker Studio](https://img.shields.io/badge/Looker%20Studio-Data%20Viz-orange)
 
 ---
 

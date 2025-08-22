@@ -513,3 +513,16 @@ git add .
 git commit -m "Initial project upload"
 git branch -M main
 git push -u origin main
+# 1) Ustaw tożsamość (podaj swój mail z GitHuba)
+git config --global user.email "TWÓJ_MAIL_Z_GITHUBA"
+git config --global user.name "Sandra Swiderek"   # lub jak chcesz, ważne żeby było
+# 2) Sprawdź, że pliki są dodane
+git status
+# Jeśli potrzeba, dodaj je ponownie
+git add .
+# 3) Zrób commit (ten krok wcześniej się wywalił)
+git commit -m "Initial project upload"
+# 4) Upewnij się, że gałąź nazywa się main
+git branch -M main
+# 5) Wyślij na GitHuba
+git push -u origin main

@@ -1,3 +1,0 @@
-Starting background process...[INFO] 2025-08-12 08:55:45.877 AM -- [CoreAgent] Agent Server started on http://localhost:38247
-[INFO] 2025-08-12 08:55:45.879 AM -- [CoreAgent] Agent Card: http://localhost:38247/.well-known/agent.json
-[INFO] 2025-08-12 08:55:45.880 AM -- [CoreAgent] Press Ctrl+C to stop the server

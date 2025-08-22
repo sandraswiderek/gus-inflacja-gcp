@@ -1,5 +1,0 @@
-2025-08-22 12:29:22.267 [warning] Dir "/home/sandraswiderekk/.pixi/envs" is not watchable (directory does not exist)
-2025-08-22 12:29:22.402 [info] Python interpreter path: /bin/python
-2025-08-22 12:29:22.640 [info] > pyenv which python
-2025-08-22 12:29:22.640 [info] cwd: .
-2025-08-22 12:29:26.440 [info] Starting Jedi language server for sandraswiderekk.

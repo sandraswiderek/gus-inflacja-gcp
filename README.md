@@ -37,9 +37,8 @@ APIs → Cloud Storage → BigQuery → Looker Studio
 - Historical data analysis of inflation, wages, product prices (bread, fuel, energy), unemployment, and exchange rates.
 
 
-## 🧱
 
-## Getting Started 
+## 🧱 Getting Started 
 
 1. Clone the repository
 
@@ -77,10 +76,11 @@ Build interactive dashboard with year selector and comparison charts.
 
 ## Dashboard Demo
 
-Live Looker Studio Dashboard
- (insert your public link)
+Live Looker Studio Dashboard: https://lookerstudio.google.com/reporting/ad47fc1c-771f-4632-bb84-a67096e62b93
 
 Example screenshot:
+<img width="986" height="737" alt="image" src="https://github.com/user-attachments/assets/1a2590f8-410d-48b3-819c-fc4bfdcd7baa" />
+
 
 ## Future Improvements
 

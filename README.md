@@ -56,7 +56,7 @@ cd macro-dashboard-pl
 
 
 2. Install dependencies for each function
-### Example for GUS function
+*Example for GUS function*
 
 ```bash
 cd gus_function

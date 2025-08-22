@@ -8,21 +8,20 @@ Interactive data pipeline and dashboard showing macroeconomic indicators in Pola
 
 ## 🎯 Project Goal
 
-The goal of this project was to design a cloud-based data pipeline for collecting, processing, and visualizing macroeconomic indicators of Poland. It aims to provide clear insights into price dynamics, inflation, and their relation to wages and exchange rates through an interactive dashboard.
-
+Design and implement a cloud-based data pipeline for collecting, processing, and visualizing macroeconomic indicators of Poland. The dashboard provides insights into price dynamics, inflation, wages, and exchange rates.
 ---
 
 ## 🧰 Project Architecture
 - Data ingested from public APIs: GUS, Eurostat, and NBP (exchange rates).  
 - Raw data stored in **Google Cloud Storage**.  
 - Data processed and loaded into **BigQuery**.  
-- Automated updates scheduled via **Cloud Scheduler**.  
+- Automated data refresh using **Cloud Scheduler**.  
 - Visualization created in **Looker Studio** (interactive dashboard with year selector). 
 
 ---
 
 ## 📊 Pipeline flow
-APIs → Cloud Storage → BigQuery → Looker Studio  
+[APIs] → [Cloud Storage] → [BigQuery] → [Looker Studio] 
 
 ---
 

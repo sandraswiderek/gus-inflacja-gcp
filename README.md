@@ -67,6 +67,8 @@ pip install -r requirements.txt
 
 3. Deploy Cloud Functions
 
+*Example for GUS function*
+
 ```bash
 gcloud functions deploy gus_function \
   --runtime python310 \
@@ -74,7 +76,7 @@ gcloud functions deploy gus_function \
   --allow-unauthenticated
 ```
 
-(repeat for gdp_function and kursy_function)
+2 and 3 repeat for gdp_function and kursy_function.
 
 
 4. Run SQL transformations in BigQuery
@@ -84,7 +86,7 @@ gcloud functions deploy gus_function \
 
 
 5. Connect BigQuery to Looker Studio
-* Build interactive dashboard in Looker Studio connected to BigQuery (year selector + comparison charts).
+* build interactive dashboard in Looker Studio connected to BigQuery (year selector + comparison charts)
 
 ---
 

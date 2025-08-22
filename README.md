@@ -93,7 +93,7 @@ gcloud functions deploy gus_function \
 
 ## Dashboard Demo
 
-Live Looker Studio Dashboard: [![View in Looker Studio](https://img.shields.io/badge/View%20in-Looker%20Studio-blue)](https://lookerstudio.google.com/reporting/ad47fc1c-771f-4632-bb84-a67096e62b93)
+Live Looker Studio Dashboard: [![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-Blue)](https://lookerstudio.google.com/reporting/ad47fc1c-771f-4632-bb84-a67096e62b93)
 
 Example screenshot:
 

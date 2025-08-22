@@ -1,4 +1,4 @@
-# 📊 Price Changes and Inflation in Poland
+# Price Changes and Inflation in Poland
 
 ## Project
 
@@ -12,7 +12,7 @@ Design and implement a cloud-based data pipeline for collecting, processing, and
 
 ---
 
-## 🧰 Project Architecture
+## 📐 Project Architecture
 - Data ingested from public APIs: GUS, Eurostat, and NBP (exchange rates).  
 - Raw data stored in **Google Cloud Storage**.  
 - Data processed and loaded into **BigQuery**.  
@@ -27,22 +27,22 @@ Design and implement a cloud-based data pipeline for collecting, processing, and
 ---
 
 ## Technologies
-- **Google Cloud Platform**: BigQuery, Cloud Storage, Cloud Scheduler  
-- **Python** (requests, pandas, google-cloud-bigquery)  
-- **SQL**  
-- **Looker Studio**  
+- ☁️ **Google Cloud Platform**: BigQuery, Cloud Storage, Cloud Scheduler  
+- 🐍 **Python** (requests, pandas, google-cloud-bigquery)  
+- 💾 **SQL**  
+- 📊 **Looker Studio**  
 
 ---
 
 ## Features
-- Automated data ingestion from GUS, Eurostat, and NBP APIs.  
-- Scheduled updates of BigQuery datasets.  
-- Interactive dashboard with year selection and comparison charts.  
-- Historical data analysis of inflation, wages, product prices (bread, fuel, energy), unemployment, and exchange rates.
+- 🔄 Automated data ingestion from GUS, Eurostat, and NBP APIs.  
+- ⏱️ Scheduled updates of BigQuery datasets.  
+- 🖥️ Interactive dashboard with year selection and comparison charts.  
+- 📈 Historical data analysis of inflation, wages, product prices (bread, fuel, energy), unemployment, and exchange rates.
 
 ---
 
-## 🧱 Getting Started 
+## 🚀 Getting Started 
 
 1. Clone the repository
 

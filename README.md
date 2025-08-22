@@ -63,7 +63,6 @@ cd gus_function
 pip install -r requirements.txt
 ```
 
-```markdown
 
 3. Deploy Cloud Functions
 
@@ -75,7 +74,7 @@ gcloud functions deploy gus_function \
 ```
 
 (repeat for gdp_function and kursy_function)
-```
+
 
 4. Run SQL transformations in BigQuery
 

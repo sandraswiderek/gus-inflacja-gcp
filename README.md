@@ -22,7 +22,7 @@ Design and implement a cloud-based data pipeline for collecting, processing, and
 ---
 
 ## 📊 Pipeline flow
-[APIs] → [Cloud Storage] → [BigQuery] → [Looker Studio] 
+```[APIs] → [Cloud Storage] → [BigQuery] → [Looker Studio]```
 
 ---
 

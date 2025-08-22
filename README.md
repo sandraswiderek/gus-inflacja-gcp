@@ -75,12 +75,12 @@ gcloud functions deploy gus_function \
 
 4. Run SQL transformations in BigQuery
 
-latest_query.sql → loads the most recent macroeconomic data
-refresh_gdp_fx_quarterly.sql → updates GDP and exchange rate data quarterly
+* `latest_query.sql` → loads the most recent macroeconomic data
+* `refresh_gdp_fx_quarterly.sql` → updates GDP and exchange rate data quarterly
 
 
 5. Connect BigQuery to Looker Studio
-Build interactive dashboard with year selector and comparison charts.
+* Build interactive dashboard with year selector and comparison charts.
 
 ---
 

@@ -1,9 +1,8 @@
-# 📊 gus-inflacja-gcp
+# 📊 Price Changes and Inflation in Poland
 
-## Projekt
+## Project
 
-Dashboard inflacji na podstawie danych GUS BDL i Google Cloud Platform  
-**ENG**: *Inflation trends dashboard using Polish GUS BDL API and Google Cloud Platform (BigQuery, Cloud Functions, Looker Studio)*
+*Interactive data pipeline and dashboard showing macroeconomic indicators in Poland (inflation, wages, fuel, energy, bread, unemployment, exchange rates).*
 
 ---
 

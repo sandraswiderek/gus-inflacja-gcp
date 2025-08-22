@@ -21,8 +21,10 @@ The goal of this project was to design a cloud-based data pipeline for collectin
 
 ---
 
-📊 **Pipeline flow:**  
+## 📊 Pipeline flow
 APIs → Cloud Storage → BigQuery → Looker Studio  
+
+---
 
 ## Technologies
 - **Google Cloud Platform**: BigQuery, Cloud Storage, Cloud Scheduler  
@@ -30,13 +32,15 @@ APIs → Cloud Storage → BigQuery → Looker Studio
 - **SQL**  
 - **Looker Studio**  
 
+---
+
 ## Features
 - Automated data ingestion from GUS, Eurostat, and NBP APIs.  
 - Scheduled updates of BigQuery datasets.  
 - Interactive dashboard with year selection and comparison charts.  
 - Historical data analysis of inflation, wages, product prices (bread, fuel, energy), unemployment, and exchange rates.
 
-
+---
 
 ## 🧱 Getting Started 
 
@@ -81,6 +85,7 @@ Live Looker Studio Dashboard: https://lookerstudio.google.com/reporting/ad47fc1c
 Example screenshot:
 <img width="986" height="737" alt="image" src="https://github.com/user-attachments/assets/1a2590f8-410d-48b3-819c-fc4bfdcd7baa" />
 
+---
 
 ## Future Improvements
 

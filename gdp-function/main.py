@@ -4,9 +4,9 @@ import requests
 from google.cloud import storage, bigquery
 
 # === Konfiguracja ===
-BUCKET_NAME = "gus-bdl"                           # opcjonalnie: zrzut JSON do GCS
+BUCKET_NAME = "gus-bdl"
 DATASET_ID = os.environ.get("DATASET_ID", "bdl_dataset")
-TABLE_GDP  = "gdp"                                 # bdl_dataset.gdp (date DATE, value FLOAT64, metric STRING)
+TABLE_GDP  = "gdp"         # bdl_dataset.gdp (date DATE, value FLOAT64, metric STRING)
 
 def _quarter_end_date(year: int, q: str) -> str:
     """Zwraca datę końca kwartału w formacie YYYY-MM-DD dla 'Q1'..'Q4'."""

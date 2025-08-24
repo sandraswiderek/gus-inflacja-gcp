@@ -57,52 +57,6 @@ Design and implement a cloud-based data pipeline for collecting, processing, and
 
 ---
 
-## 🚀 Getting Started 
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/sandraswiderek/macro-dashboard-pl
-cd macro-dashboard-pl
-```
-
-
-2. Install dependencies for each function
-
-*Example for GUS function*
-
-```bash
-cd gus_function
-pip install -r requirements.txt
-```
-
-
-3. Deploy Cloud Functions
-
-*Example for GUS function*
-
-```bash
-gcloud functions deploy gus_function \
-  --runtime python310 \
-  --trigger-http \
-  --allow-unauthenticated
-```
-
-(Repeat steps 2 and 3 for `gdp_function` and `kursy_function`)
-
-
-
-4. Run SQL transformations in BigQuery
-
-* `latest_query.sql` → loads the most recent macroeconomic data
-* `refresh_gdp_fx_quarterly.sql` → updates GDP and exchange rate data quarterly
-
-
-5. Connect BigQuery to Looker Studio
-* build interactive dashboard in Looker Studio connected to BigQuery (year selector + comparison charts)
-
----
-
 
 ## Future Improvements
 
